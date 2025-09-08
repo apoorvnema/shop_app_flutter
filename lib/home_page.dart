@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/cart_page.dart';
 import 'package:shop_app/product_list.dart';
 
 class HomePage extends StatefulWidget {
@@ -11,11 +12,16 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int currentPage = 0;
 
+  List<Widget> pages = [ProductList(), CartPage()];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ProductList(),
+      body: IndexedStack(index: currentPage, children: pages),
       bottomNavigationBar: BottomNavigationBar(
+        iconSize: 35,
+        selectedFontSize: 0,
+        unselectedFontSize: 0,
         onTap: (value) {
           setState(() {
             currentPage = value;
