@@ -100,7 +100,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Theme.of(context).primaryColor,
-                      minimumSize: Size(double.infinity, 50),
+                      fixedSize: Size(350, 50),
                     ),
                     onPressed: () {
                       onTap();
