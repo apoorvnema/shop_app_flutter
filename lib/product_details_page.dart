@@ -15,7 +15,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
 
   void onTap() {
     if (selectedSize != 0) {
-      Provider.of<CartProvider>(context, listen: false).addProduct({
+      context.read<CartProvider>().addProduct({
         'id': widget.product['id'],
         'title': widget.product['title'],
         'price': widget.product['price'],
