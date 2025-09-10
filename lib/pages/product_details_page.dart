@@ -51,7 +51,10 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
           Spacer(),
           Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Image.asset(widget.product['imageUrl'] as String),
+            child: Image.asset(
+              widget.product['imageUrl'] as String,
+              height: 250,
+            ),
           ),
           Spacer(flex: 2),
           Container(
